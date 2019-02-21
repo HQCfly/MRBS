@@ -67,7 +67,7 @@
 
 <script>
     // 日期格式化方法
-    Date.prototype.yuan = function (fmt) { //author: meizz
+    Date.prototype.twiss = function (fmt) { //author: meizz
             var o = {
                 "M+": this.getMonth() + 1, //月份
                 "d+": this.getDate(), //日
@@ -131,7 +131,7 @@
            CHOOSE_DATE = location.search.slice(11)
           }
       else {
-           CHOOSE_DATE = new Date().yuan('yyyy-MM-dd');
+           CHOOSE_DATE = new Date().twiss('yyyy-MM-dd');
            }
     // 发送ajax
 
@@ -169,7 +169,7 @@
             }).on('changeDate', book_query);
 
      function book_query(e) {
-         CHOOSE_DATE=e.date.yuan("yyyy-MM-dd");
+         CHOOSE_DATE=e.date.twiss("yyyy-MM-dd");
          location.href="/index/?book_date="+CHOOSE_DATE;
      }
 </script>
